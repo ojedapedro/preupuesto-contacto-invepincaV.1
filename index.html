@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Presupuesto - INVEPINCA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://i.ibb.co/hJ48PnDC/Banner-moderno-de-INVEPINCA.png" alt="INVEPINCA Logo">
+                <div class="logo-text">
+                    <h1>INVEPINCA</h1>
+                    <p>Impermeabilización y Construcción</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p><strong>J-40490348-8</strong></p>
+            </div>
+        </header>
+        
+        <section class="calculator-section">
+            <h2 class="section-title">Calculadora de Presupuesto</h2>
+            
+            <form id="budget-calculator">
+                <div class="form-group">
+                    <label for="product">Producto</label>
+                    <select id="product" name="product" required>
+                        <option value="">Seleccione un producto</option>
+                        <option value="invemanto">Invemanto</option>
+                        <option value="pintura-impermeabilizante">Pintura Impermeabilizante Elastomerica</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Presentación</label>
+                    <div class="product-presentation" id="presentation-options">
+                        <div class="presentation-option">
+                            <div class="presentation-name">Seleccione un producto primero</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Cantidad Total (metros cuadrados)</label>
+                    <input type="number" id="quantity" name="quantity" min="1" placeholder="Ingrese la cantidad en m²" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Mano de Obra</label>
+                    <div class="labor-options" id="labor-options">
+                        <div class="labor-option">
+                            <input type="radio" id="no-labor" name="labor" value="no" checked>
+                            <label for="no-labor">No incluir mano de obra</label>
+                        </div>
+                    </div>
+                    <div class="labor-note" id="labor-note">
+                        Seleccione un producto para ver las opciones de mano de obra disponibles
+                    </div>
+                </div>
+                
+                <button type="button" id="calculate-btn" class="btn">Calcular Presupuesto</button>
+                
+                <div class="results" id="results">
+                    <h3>Resumen de Presupuesto</h3>
+                    <p><strong>Producto:</strong> <span id="result-product"></span></p>
+                    <p><strong>Presentación:</strong> <span id="result-presentation"></span></p>
+                    <p><strong>Cantidad:</strong> <span id="result-quantity"></span> m²</p>
+                    <p><strong>Mano de obra:</strong> <span id="result-labor"></span></p>
+                    <p class="total-price">Total: $<span id="result-total"></span></p>
+                    
+                    <a href="#" id="whatsapp-btn" class="btn btn-whatsapp">Enviar por WhatsApp</a>
+                </div>
+            </form>
+        </section>
+        
+        <section class="whatsapp-section">
+            <h2 class="section-title">Contáctanos directamente</h2>
+            <div class="whatsapp-container">
+                <iframe src="https://whatsform.com/dNFs-4" width="100%" height="600" frameBorder="0"></iframe>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
